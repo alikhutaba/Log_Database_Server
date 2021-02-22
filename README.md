@@ -33,7 +33,6 @@ Step 2. Add the dependency:
 ## Init
 
 init LogToServer when tha app start add your server url
-
 ```java
          LogToServer.initServer(baseUrl);
 ```
@@ -41,45 +40,62 @@ init LogToServer when tha app start add your server url
 
 ## Usage
 
+send all the logs to the server with POST method, and delete them from the local database.
+URL : YOUR_BASE_URL/logs
+each post send 20 logs to the server.
+```java
+	LogToServer.sendAllLogsToServer();
+```
 
 
-send a signal log to the server, without save it to local database.
-
+send a signal log to the server with POST method, without save it to local database.
+URL : YOUR_BASE_URL/log
 ```java
 	LogToServer.sendLogToServer(String tag, Object data, Class<T> classOfT);
 ```
 
+
 add log the the local database, without send it to server.
 ```java
-	addLogToDB(String tag, Object data, Class<T> classOfT)
+	LogToServer.addLogToDB(String tag, Object data, Class<T> classOfT)
 ```
 
 
+
+send all logs between the dates to the server with POST method, and delete them from the local database.
+URL : YOUR_BASE_URL/logs
+each post send 20 logs to the server.
 ```java
-
-        SquareImageButton squareImageButton1;
-        squareImageButton1 = (SquareImageButton) findViewById(R.id.squareimagebutton1);
-        squareImageButton1.init(new ImageButtonConfig
-                        .ImageButtonConfigBuilder(this)
-                        .mainTitleColor("#FF000000") // main title text Color in Hex, default white (Hex:#FFFFFF").
-                        .mainTitleSize(18) // main title text size, default 18 sp.
-                        .mainTitletypeface(ResourcesCompat.getFont(this, R.font.alegreya_sans_sc_medium)) // main title font typeface, default font oxygen_light.
-                        .mainTitleBackgroundColor("#B3FF8C00") // main title Background color in Hex, default Transparent black(Hex:#B3000000).
-                        .subTitleColor("#FF000000") // sub title text Color in Hex, default white (Hex:#FFFFFF").
-                        .subTitleSize(14) // sub title text size, default 14 sp.
-                        .subTitletypeface(ResourcesCompat.getFont(this, R.font.alegreya_sans_sc_medium)) // sub title font typeface, default font oxygen_light.
-                        .subTitleBackgroundColor("#B3FF8C00") // sub title Background color in Hex, default Transparent black(Hex:#B3000000).
-                        .build(),
-                new ImageButton("https://assets.entrepreneur.com/content/3x2/2000/20150824181921-meditate-yoga-relax-calm-zen.jpeg",
-                        "Main title 1",
-                        "Sub title 1"));
-                        
-                        
-            squareImageButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                // clickable image button....
-            }
-        });
+	LogToServer.sendAllLogsBetweenDatesToServer(long start, long end)
 ```
+
+
+send all logs with tag to the server with POST method, and delete them from the local database.
+URL : YOUR_BASE_URL/logs
+each post send 20 logs to the server.
+```java
+	LogToServer.sendAllLogsByTagToServer(String tag)
+```
+
+
+
+
+
+delete a list of logs from the local database.
+```java
+	LogToServer.deleteLogsFromDB(List<LogDB> logs)
+```
+
+
+delete a signal log from the local database.
+```java
+	LogToServer.deleteLogFromDB(LogDB logs)
+```
+
+
+delete all logs from the local database.
+```java
+	LogToServer.deleteAllLogsFromDB()
+```
+
+
