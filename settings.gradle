@@ -1,0 +1,3 @@
+include ':Log_Database_Server'
+include ':app'
+rootProject.name = "Log_Database_Server"
