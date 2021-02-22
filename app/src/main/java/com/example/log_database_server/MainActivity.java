@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button main_BTN_Log;
     private Button main_BTN_funcLog;
     private Button main_BTN_buttonLog;
-    private static final String baseUrl = "https://ec9b7ebf-2c18-4399-b9a7-f6e36137edb3.mock.pstmn.io/";
+    private static final String baseUrl = "YOUR_SERVER_API_URL";
 
 
     private int indx = 0;
