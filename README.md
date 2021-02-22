@@ -3,21 +3,11 @@
 
 
 ![GitHub](https://img.shields.io/github/license/alikhutaba/Android-shape-image-button)
-[![](https://jitpack.io/v/alikhutaba/Android-shape-image-button.svg)](https://jitpack.io/#alikhutaba/Android-shape-image-button)
-
-
-
 [![](https://jitpack.io/v/alikhutaba/Log_Database_Server.svg)](https://jitpack.io/#alikhutaba/Log_Database_Server)
 
 
-A library for simple implementation of buttons with rounder corners images with the main title and subtitle.
-you can load your images and title text to the button, with many options to change :
-titles color text.
-titles background-color.
-titles text size.
-titles font.
 
-The main implementation of this buttons you can see in spotify and calm apps.
+A library for simple generic Object Logs implementation in local database and easy way to send them into your server 
 
 
 ## Setup
@@ -38,7 +28,31 @@ Step 2. Add the dependency:
 	        implementation 'com.github.alikhutaba:Log_Database_Server:Tag'
 	}
 ```
+
+
+## Init
+
+init LogToServer when tha app start add your server url
+
+```java
+         LogToServer.initServer(baseUrl);
+```
+
+
 ## Usage
+
+
+
+send a signal log to the server, without save it to local database.
+
+```java
+	LogToServer.sendLogToServer(String tag, Object data, Class<T> classOfT);
+```
+
+add log the the local database, without send it to server.
+```java
+	addLogToDB(String tag, Object data, Class<T> classOfT)
+```
 
 
 ```java
