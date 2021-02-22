@@ -15,8 +15,8 @@ A library for simple generic Object Logs implementation in local database and ea
 Json send to server : 
 
 	{
-		tag: "ButtonData"
-		timeStampDate: "Feb 22, 2021 12:04:37 PM"
+		tag: "YOUR TAG"
+		timeStampDate: "CREATION TIME STAMP DATE" //FORMAT: MM DD YY HH MM SS AM/PM , EXAMPLE:  Feb 22, 2021 12:04:37 PM
 		data: "YOUR CLASS DATA"
 	}
 ```
