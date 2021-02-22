@@ -11,14 +11,15 @@ A library for simple generic Object Logs implementation in local database and ea
 
 
 
-
+```
 Json send to server : 
-{
-tag: "ButtonData"
-timeStampDate: "Feb 22, 2021 12:04:37 PM"
-data: "YOUR CLASS DATA"
-}
 
+	{
+		tag: "ButtonData"
+		timeStampDate: "Feb 22, 2021 12:04:37 PM"
+		data: "YOUR CLASS DATA"
+	}
+```
 ## Setup
 Step 1. Add it in your root build.gradle at the end of repositories:
 ```
