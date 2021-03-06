@@ -1,7 +1,6 @@
 package com.example.log_database_server;
 
 import java.util.List;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;

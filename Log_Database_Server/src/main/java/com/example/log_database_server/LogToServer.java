@@ -2,16 +2,11 @@ package com.example.log_database_server;
 
 
 import android.annotation.SuppressLint;
-
 import retrofit2.Callback;
-
 import android.util.Log;
-
 import com.google.gson.Gson;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;

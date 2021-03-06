@@ -2,20 +2,17 @@ package com.example.log_database_server;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button main_BTN_Log;
     private Button main_BTN_funcLog;
     private Button main_BTN_buttonLog;
-    private static final String baseUrl = "YOUR_SERVER_API_URL";
+    private static final String baseUrl = "https://ec9b7ebf-2c18-4399-b9a7-f6e36137edb3.mock.pstmn.io/";
 
 
     private int indx = 0;

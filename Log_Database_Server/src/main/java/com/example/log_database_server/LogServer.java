@@ -2,7 +2,6 @@ package com.example.log_database_server;
 
 import java.util.Date;
 
-
 public class LogServer {
 
     public Date timeStampDate;

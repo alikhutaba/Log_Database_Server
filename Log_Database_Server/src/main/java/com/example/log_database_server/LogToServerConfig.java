@@ -1,7 +1,6 @@
 package com.example.log_database_server;
 
 import android.content.Context;
-
 import androidx.room.Room;
 
 public class LogToServerConfig {
